@@ -81,6 +81,23 @@
             border-radius: 3px;
             background: #f0f0f0;
             color: #555;
+            cursor: default;
+            position: relative;
+        }
+        .tag[data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            margin-bottom: 4px;
+            z-index: 10;
         }
         .tag.stage {
             background: #e8f4e8;
@@ -90,16 +107,73 @@
             background: #fff3e0;
             color: #b35900;
         }
+        /* Header */
+        .header {
+            display: flex;
+            gap: 1.5em;
+            align-items: flex-start;
+            background: #f9f9f9;
+            padding: 1.5em;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            flex-shrink: 0;
+        }
+        .header-content h1 {
+            margin-top: 0;
+        }
+        .header-content p {
+            margin: 0;
+        }
+        .header-content p.bio {
+            margin-top: 0.5em;
+        }
+        /* Education layout */
+        .education-entry {
+            display: flex;
+            gap: 1em;
+            align-items: flex-start;
+            margin-bottom: 2em;
+        }
+        .education-entry > a {
+            flex-shrink: 0;
+            line-height: 0;
+            margin-top: 5px;
+        }
+        .education-entry img {
+            height: 36px;
+            min-width: 36px;
+            max-width: 60px;
+            object-fit: contain;
+        }
+        .education-entry .content {
+            flex: 1;
+        }
+        .education-entry .content p {
+            margin: 0;
+        }
+        .education-entry .year {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 0.3em;
+        }
     </style>
 </head>
 <body>
-    <h1>Altaf Dhamani</h1>
-    <p class="subtitle">Product Leader / Singapore</p>
-
-    <p>
-        Product leader with 20+ years of experience building great products used
-        by millions of users.
-    </p>
+    <div class="header">
+        <img src="assets/profile.jpg" alt="Altaf Dhamani" class="profile-pic">
+        <div class="header-content">
+            <h1>Altaf Dhamani</h1>
+            <p class="subtitle">Product Leader / Singapore</p>
+            <p class="bio">Product leader with 20+ years of experience building great products used by millions of users.</p>
+        </div>
+    </div>
 
     <hr class="subtle">
 
@@ -107,10 +181,10 @@
 
     <div class="timeline-entry">
         <div class="year">2022 - Present</div>
-        <img src="assets/pelago.svg" alt="Pelago">
+        <a href="https://www.pelago.com" target="_blank"><img src="assets/pelago.svg" alt="Pelago"></a>
         <div class="tags">
-            <span class="tag stage">1→10</span>
-            <span class="tag stage">10→100</span>
+            <span class="tag stage" data-tooltip="Growth stage">1→10</span>
+            <span class="tag stage" data-tooltip="Late stage">10→100</span>
         </div>
         <p>
             Chief Product Officer at <a href="https://www.pelago.com">Pelago</a>, a travel experiences
@@ -121,10 +195,10 @@
 
     <div class="timeline-entry">
         <div class="year">2017 - 2022</div>
-        <img src="assets/wego.svg" alt="Travelstop">
+        <a href="https://www.wego.com" target="_blank"><img src="assets/wego.svg" alt="Travelstop"></a>
         <div class="tags">
-            <span class="tag stage">0→1</span>
-            <span class="tag outcome">Acquired</span>
+            <span class="tag stage" data-tooltip="Early stage">0→1</span>
+            <span class="tag outcome" data-tooltip="Acquired by Wego">Acquired</span>
         </div>
         <p>
             Co-founder &amp; CPO at <a href="https://www.wego.com">Travelstop</a> (acquired by Wego).
@@ -135,11 +209,11 @@
 
     <div class="timeline-entry">
         <div class="year">2015 - 2017</div>
-        <img src="assets/expedia.svg" alt="HomeAway">
+        <a href="https://www.expediagroup.com" target="_blank"><img src="assets/expedia.svg" alt="HomeAway"></a>
         <div class="tags">
-            <span class="tag stage">1→10</span>
-            <span class="tag stage">10→100</span>
-            <span class="tag outcome">Acquired</span>
+            <span class="tag stage" data-tooltip="Growth stage">1→10</span>
+            <span class="tag stage" data-tooltip="Late stage">10→100</span>
+            <span class="tag outcome" data-tooltip="Acquired by Expedia">Acquired</span>
         </div>
         <p>
             Head of Product at <a href="https://www.vrbo.com">HomeAway</a> (Expedia Group).
@@ -150,10 +224,10 @@
 
     <div class="timeline-entry">
         <div class="year">2012 - 2015</div>
-        <img src="assets/homeaway.svg" alt="Travelmob">
+        <a href="https://www.vrbo.com" target="_blank"><img src="assets/homeaway.svg" alt="Travelmob"></a>
         <div class="tags">
-            <span class="tag stage">0→1</span>
-            <span class="tag outcome">Acquired</span>
+            <span class="tag stage" data-tooltip="Early stage">0→1</span>
+            <span class="tag outcome" data-tooltip="Acquired by HomeAway">Acquired</span>
         </div>
         <p>
             Product Engineer at Travelmob, acquired by HomeAway (now Vrbo).
@@ -163,9 +237,9 @@
 
     <div class="timeline-entry">
         <div class="year">2005 - 2012</div>
-        <img src="assets/yahoo.svg" alt="Yahoo!">
+        <a href="https://www.yahoo.com" target="_blank"><img src="assets/yahoo.svg" alt="Yahoo!"></a>
         <div class="tags">
-            <span class="tag stage">10→100</span>
+            <span class="tag stage" data-tooltip="Late stage">10→100</span>
         </div>
         <p>
             Quality Engineering Manager at <a href="https://yahoo.com">Yahoo!</a>.
@@ -178,23 +252,27 @@
 
     <h2>Education</h2>
 
-    <div class="timeline-entry">
-        <div class="year">2015 - 2017</div>
-        <img src="assets/ntu.svg" alt="NTU">
-        <p>
-            M.Sc. Technopreneurship &amp; Innovation from
-            <a href="https://www.ntu.edu.sg">Nanyang Technological University</a>.
-            Director's List, Merit Award Recipient.
-        </p>
+    <div class="education-entry">
+        <a href="https://www.ntu.edu.sg" target="_blank"><img src="assets/ntu.svg" alt="NTU"></a>
+        <div class="content">
+            <div class="year">2015 - 2017</div>
+            <p>
+                M.Sc. Technopreneurship &amp; Innovation from
+                <a href="https://www.ntu.edu.sg">Nanyang Technological University</a>.
+                Director's List, Merit Award Recipient.
+            </p>
+        </div>
     </div>
 
-    <div class="timeline-entry">
-        <div class="year">2004 - 2006</div>
-        <img src="assets/mumbai.svg" alt="University of Mumbai">
-        <p>
-            M.Sc. Information Technology from University of Mumbai.
-            First Class, focus on System Security and Virtual Reality.
-        </p>
+    <div class="education-entry">
+        <a href="https://mu.ac.in" target="_blank"><img src="assets/mumbai.svg" alt="University of Mumbai"></a>
+        <div class="content">
+            <div class="year">2004 - 2006</div>
+            <p>
+                M.Sc. Information Technology from University of Mumbai.
+                First Class, focus on System Security and Virtual Reality.
+            </p>
+        </div>
     </div>
 
     <hr class="subtle">
