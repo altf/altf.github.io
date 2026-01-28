@@ -1,39 +1,211 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115548312-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altaf Dhamani</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.2em;
+        }
+        h2 {
+            font-size: 1.1em;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+        }
+        a {
+            color: #0066cc;
+        }
+        a:visited {
+            color: #551a8b;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.3em;
+        }
+        .subtitle {
+            color: #666;
+            margin-top: 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 2em 0;
+        }
+        hr.subtle {
+            border-top: 1px solid #eee;
+            margin: 2.5em 0;
+        }
+        .timeline-entry {
+            margin-bottom: 3em;
+        }
+        .timeline-entry .year {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 0.5em;
+        }
+        .timeline-entry img {
+            height: 36px;
+            min-width: 36px;
+            max-width: 140px;
+            object-fit: contain;
+            object-position: left;
+            margin-bottom: 0.5em;
+            display: block;
+        }
+        .timeline-entry p {
+            margin: 0;
+        }
+        .tags {
+            margin-bottom: 0.5em;
+        }
+        .tag {
+            display: inline-block;
+            font-family: -apple-system, sans-serif;
+            font-size: 0.75em;
+            padding: 2px 8px;
+            margin-right: 6px;
+            border-radius: 3px;
+            background: #f0f0f0;
+            color: #555;
+        }
+        .tag.stage {
+            background: #e8f4e8;
+            color: #2d6a2d;
+        }
+        .tag.outcome {
+            background: #fff3e0;
+            color: #b35900;
+        }
+    </style>
+</head>
+<body>
+    <h1>Altaf Dhamani</h1>
+    <p class="subtitle">Product Leader / Singapore</p>
 
-  gtag('config', 'UA-115548312-1');
-</script>
+    <p>
+        Product leader with 20+ years of experience building great products used
+        by millions of users.
+    </p>
 
+    <hr class="subtle">
 
-<script>
-/**
-* Function that tracks a click on an outbound link in Analytics.
-* This function takes a valid URL string as an argument, and uses that URL string
-* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-* using 'navigator.sendBeacon' in browser that support it.
-*/
-var trackOutboundLink = function(url) {
-   ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function(){document.location = url;}
-   });
-}
-</script>
+    <h2>Experience</h2>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello, World!</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  </head>
-  <body>
+    <div class="timeline-entry">
+        <div class="year">2022 - Present</div>
+        <img src="assets/pelago.svg" alt="Pelago">
+        <div class="tags">
+            <span class="tag stage">1→10</span>
+            <span class="tag stage">10→100</span>
+        </div>
+        <p>
+            Chief Product Officer at <a href="https://www.pelago.com">Pelago</a>, a travel experiences
+            platform by Singapore Airlines. Leading product, design, research, analytics, and payments.
+            Grew conversion by 200%+, scaled supply 100x, and led AI initiatives.
+        </p>
+    </div>
 
-  </body>
+    <div class="timeline-entry">
+        <div class="year">2017 - 2022</div>
+        <img src="assets/wego.svg" alt="Travelstop">
+        <div class="tags">
+            <span class="tag stage">0→1</span>
+            <span class="tag outcome">Acquired</span>
+        </div>
+        <p>
+            Co-founder &amp; CPO at <a href="https://www.wego.com">Travelstop</a> (acquired by Wego).
+            Built a modern corporate travel and expense platform adopted by companies like Klook,
+            Carousell, and Funding Societies. Raised $3M Pre-Series A led by Accel.
+        </p>
+    </div>
+
+    <div class="timeline-entry">
+        <div class="year">2015 - 2017</div>
+        <img src="assets/expedia.svg" alt="HomeAway">
+        <div class="tags">
+            <span class="tag stage">1→10</span>
+            <span class="tag stage">10→100</span>
+            <span class="tag outcome">Acquired</span>
+        </div>
+        <p>
+            Head of Product at <a href="https://www.vrbo.com">HomeAway</a> (Expedia Group).
+            Led product and design for emerging markets across 21 countries and 14 languages.
+            Launch partner for Apple Pay in Hong Kong and Singapore.
+        </p>
+    </div>
+
+    <div class="timeline-entry">
+        <div class="year">2012 - 2015</div>
+        <img src="assets/homeaway.svg" alt="Travelmob">
+        <div class="tags">
+            <span class="tag stage">0→1</span>
+            <span class="tag outcome">Acquired</span>
+        </div>
+        <p>
+            Product Engineer at Travelmob, acquired by HomeAway (now Vrbo).
+            Early employee who built Asia's top vacation rental platform from the ground up.
+        </p>
+    </div>
+
+    <div class="timeline-entry">
+        <div class="year">2005 - 2012</div>
+        <img src="assets/yahoo.svg" alt="Yahoo!">
+        <div class="tags">
+            <span class="tag stage">10→100</span>
+        </div>
+        <p>
+            Quality Engineering Manager at <a href="https://yahoo.com">Yahoo!</a>.
+            Built mobile products used by millions globally including Yahoo! Go, Search, Finance, Fantasy Football,
+            and APIs for Apple's default Weather and Stocks apps on iPhone.
+        </p>
+    </div>
+
+    <hr class="subtle">
+
+    <h2>Education</h2>
+
+    <div class="timeline-entry">
+        <div class="year">2015 - 2017</div>
+        <img src="assets/ntu.svg" alt="NTU">
+        <p>
+            M.Sc. Technopreneurship &amp; Innovation from
+            <a href="https://www.ntu.edu.sg">Nanyang Technological University</a>.
+            Director's List, Merit Award Recipient.
+        </p>
+    </div>
+
+    <div class="timeline-entry">
+        <div class="year">2004 - 2006</div>
+        <img src="assets/mumbai.svg" alt="University of Mumbai">
+        <p>
+            M.Sc. Information Technology from University of Mumbai.
+            First Class, focus on System Security and Virtual Reality.
+        </p>
+    </div>
+
+    <hr class="subtle">
+
+    <h2>Links</h2>
+    <ul>
+        <li><a href="https://www.linkedin.com/in/altaf/">LinkedIn</a></li>
+        <li><a href="https://twitter.com/altf">X</a></li>
+    </ul>
+
+    <hr class="subtle">
+
+    <p><small>Last updated: January 2026</small></p>
+</body>
 </html>
